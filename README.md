@@ -54,13 +54,16 @@ to set
         {
             _distributedCache = distributedCache;
         }
-   }
+
    
    public IActionResult Index()
         {
             _distributedCache.SetString("helloFromRedis", "world");
             return View();
         }
+        
+        ...
+   }
 ```
 
 

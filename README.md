@@ -1,6 +1,7 @@
-first download redis zip file from https://github.com/MicrosoftArchive/redis/releases
-extract it into c:\redis
-open cmd and run -> cd c:\redis
-then run redis   -> server with 
+# installation
 
-then run the project and use it 
+* First download redis zip file from https://github.com/MicrosoftArchive/redis/releases
+* Extract it into c:\redis
+* Open cmd and run -> cd c:\redis
+* Then run redis   -> server with
+* Then run the project and use it 

@@ -60,7 +60,12 @@ to set
    
    public IActionResult Index()
         {
-            _distributedCache.SetString("helloFromRedis", "world");
+            var distributedCacheEntryOptions = new DistributedCacheEntryOptions()
+            {
+                SlidingExpiration = TimeSpan.FromSeconds(20)
+            };
+
+            _distributedCache.SetString("helloFromRedis", "world" , distributedCacheEntryOptions);
             return View();
         }
         

@@ -18,6 +18,8 @@
 
 In startup file 
 
+set Redis server port in startup `"localhost:[portNumber]";`
+
 ```
 public void ConfigureServices(IServiceCollection services)
         {

@@ -1,3 +1,5 @@
+# Distributed Cache with Redis in ASP.NET Core 2.2
+
 # installation
 
 * First download redis zip file from https://github.com/MicrosoftArchive/redis/releases

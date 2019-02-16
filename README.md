@@ -4,8 +4,10 @@
 
 
 * install npm packages 
-    ```<PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />```
-    ```<PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />```
+
+    ```<PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    
+       <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />```
 
 
 * First download redis zip file from https://github.com/MicrosoftArchive/redis/releases

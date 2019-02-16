@@ -7,8 +7,7 @@
 * Then run the project and use it 
 
 
-
-in startup file 
+In startup file 
 
 ```
 public void ConfigureServices(IServiceCollection services)
@@ -25,4 +24,58 @@ public void ConfigureServices(IServiceCollection services)
             });
 
         }
+        
+         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        {
+
+            app.UseSession();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
+        }
+        
+        
 ```
+
+
+# Usage
+
+to set 
+
+```
+ public class HomeController : Controller
+    {
+        private readonly IDistributedCache _distributedCache;
+        public HomeController(IDistributedCache distributedCache)
+        {
+            _distributedCache = distributedCache;
+        }
+   }
+   
+   public IActionResult Index()
+        {
+            _distributedCache.SetString("helloFromRedis", "world");
+            return View();
+        }
+```
+
+
+to get 
+
+
+```
+
+public IActionResult Privacy()
+        {
+            var valueFromRedis = _distributedCache.GetString("helloFromRedis");
+
+            return View();
+        }
+        
+```
+
+
